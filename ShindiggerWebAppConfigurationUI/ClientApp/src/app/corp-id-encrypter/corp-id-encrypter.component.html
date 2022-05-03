@@ -1,0 +1,28 @@
+<div class="main">
+
+  <h4>Corp ID Encrypter</h4>
+
+  <div class="corp-id">
+    <label for="CorpId">CORP ID </label>
+    <input type="text" id="CorpId" [(ngModel)]="corpID" />
+  </div>
+
+  <div class="encrypted-id">
+    <label for="EncryptedId">Encrypted ID </label>
+    <input id="EncryptedId" [(ngModel)]="encryptedID" #encrypteddata/> 
+  </div>
+
+  <div class="two-buttons">
+
+    <div class="encrypt">
+      <button type="button" class="encrypt-button" (click)="encrypt()">Encrypt</button>
+    </div>
+
+    <div class="copy-to-clipboard">
+      <button type="button" class="copy-to-clipboard-button" (click)="copy(encrypteddata)">Copy to Clipboard</button>
+    </div>
+
+  </div>
+
+</div>
+

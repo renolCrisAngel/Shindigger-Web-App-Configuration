@@ -1,0 +1,74 @@
+.main {
+  background-color: #e81538;
+  color: white;
+  width: 90%;
+  min-height: 315px;
+}
+
+h4 {
+  margin-left: 5px;
+}
+
+input {
+  font-size: 1em;
+  margin-left: 21px;
+  width: 350px;
+}
+
+.corp-id {
+  margin-left: 230px;
+  min-height: 60px;
+  margin-top: 60px
+}
+
+.locale {
+  margin-left: 230px;
+  min-height: 50px
+}
+
+#ip {
+  width: 350px;
+  height: 40px;
+  margin-left: 30px;
+}
+
+.two-buttons {
+  display: flex;
+  flex-flow: row;
+  font-size: 20px;
+  min-height: 55px;
+  margin-left: 340px;
+}
+
+.load-locales-button {
+  border-radius: 8px;
+}
+
+.load-locales-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.update-locale-button {
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+.update-locale-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.test{
+  font-size: 25px;
+  margin-left: 920px;
+}
+
+.test-button {
+  border-radius: 8px;
+}
+
+.test-button:hover {
+  color: white;
+  background-color: #42545C;
+}

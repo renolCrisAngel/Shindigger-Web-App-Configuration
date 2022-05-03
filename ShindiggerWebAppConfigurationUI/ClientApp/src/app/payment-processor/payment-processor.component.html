@@ -1,0 +1,28 @@
+<div class="main">
+
+  <h4>Update Payment Processors</h4>
+
+  <div class="location-code">
+    <label for="LocationCode">Location Code </label>
+    <input id="LocationCode" [(ngModel)]="locationCode" />
+  </div>
+
+  <div class="processor">
+    <label for="Processor"> Processor </label>
+    <select id="prcsr">
+      <option>AuthorizeNet</option>
+      <option>Ingenico</option>
+      <option>Payfort(Egypt)</option>
+      <option>Payfort(UAE)</option>
+      <option>Payfort(KSA)</option>
+      <option>PayU</option>
+      <option>Stripe</option>
+    </select>
+
+  </div>
+
+  <div class="save-changes">
+    <button type="button" class="save-changes-button" (click)="save()">Save Changes</button>
+  </div>
+
+</div>

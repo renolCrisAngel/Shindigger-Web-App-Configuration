@@ -1,0 +1,35 @@
+<div class="main">
+
+  <h4>Locale Settings</h4>
+
+  <div class="corp-id">
+    <label for="Corp_Id">Corp_Id </label>
+    <input id="Corp_Id" [(ngModel)]="corpID" />
+  </div>
+
+  <div class="locale">
+
+    <label for="Locale"> Locale </label>
+    <select id="ip">
+      <option></option>
+    </select>
+
+  </div>
+
+  <div class="two-buttons">
+
+    <div class="load-locales">
+      <button type="button" class="load-locales-button" (click)="loadlocales()">Load Locales</button>
+    </div>
+
+    <div class="update-locale">
+      <button type="button" class="update-locale-button" (click)="updatelocales()">Update Locale</button>
+    </div>
+
+  </div>
+
+  <div class="test">
+    <button type="button" class="test-button" (click)="test()">Test</button>
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="main">
+
+  <div class="location-id">
+    <label for="LocationId" class="label1"> LOCATION ID </label>
+    <input id="LocationId" [(ngModel)]="locationID" />
+    <button type="button" class="update-button" (click)="update()">Update</button>
+  </div>
+
+  <div class="two-titles">
+     <label for="Card Fee" > CARD FEE</label>
+     <label for="Tax Method" class="label2"> TAX METHOD </label>
+  </div>
+
+    <div class="four-buttons">
+
+      <div class="two-buttons">
+
+        <div class="enable-card-fee">
+          <button type="button" class="enable-card-fee-button" (click)="enable()">Enable Card Fee</button>
+        </div>
+
+        <div class="disable-card-fee">
+          <button type="button" class="disable-card-fee-button" (click)="disable()">Disable Card Fee</button>
+        </div>
+
+        <div class="tax-on-price">
+          <button type="button" class="tax-on-price-button" (click)="taxOn()">Tax ON Price - US (1) </button>
+        </div>
+
+        <div class="tax-in-price">
+          <button type="button" class="tax-in-price-button" (click)="taxIn()">Tax IN Price - INT'L (2) </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>

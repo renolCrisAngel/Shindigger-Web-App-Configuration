@@ -1,0 +1,90 @@
+.main {
+  background-color: #e81538;
+  color: white;
+  width: 90%;
+  min-height: 315px;
+}
+
+.label1 {
+    font-weight: 500;
+}
+
+input {
+  font-size: 1em;
+  margin-left: 21px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+button {
+  margin-left: 15px;
+}
+
+.location-id {
+    margin-left: 50px;
+    min-height: 80px;
+}
+
+.update-button {
+  border-radius: 8px;
+}
+
+.update-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.two-titles {
+    margin-left: 50px;
+}
+
+.label2{
+    margin-left: 300px;
+}
+
+.four-buttons {
+    margin-left: 35px;
+}
+
+.two-buttons {
+  display: flex;
+  flex-flow: row;
+  font-size: 18px;
+}
+
+.enable-card-fee-button {
+  border-radius: 8px;
+}
+
+.enable-card-fee-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.disable-card-fee-button {
+  border-radius: 8px;
+}
+
+.disable-card-fee-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.tax-on-price-button {
+  margin-left: 63px;
+  border-radius: 8px;
+}
+
+.tax-on-price-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+.tax-in-price-button {
+  border-radius: 8px;
+}
+
+.tax-in-price-button:hover {
+  color: white;
+  background-color: #42545C;
+}
