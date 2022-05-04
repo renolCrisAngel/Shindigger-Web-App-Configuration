@@ -59,16 +59,4 @@ input {
   background-color: #42545C;
 }
 
-.test{
-  font-size: 25px;
-  margin-left: 920px;
-}
 
-.test-button {
-  border-radius: 8px;
-}
-
-.test-button:hover {
-  color: white;
-  background-color: #42545C;
-}

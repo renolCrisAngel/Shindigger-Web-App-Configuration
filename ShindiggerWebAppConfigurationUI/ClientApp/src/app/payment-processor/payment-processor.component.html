@@ -9,14 +9,12 @@
 
   <div class="processor">
     <label for="Processor"> Processor </label>
-    <select id="prcsr">
-      <option>AuthorizeNet</option>
-      <option>Ingenico</option>
-      <option>Payfort(Egypt)</option>
-      <option>Payfort(UAE)</option>
-      <option>Payfort(KSA)</option>
-      <option>PayU</option>
-      <option>Stripe</option>
+    <select id="prcsr" [(ngModel)]="selectValIndex">
+
+      <option *ngFor="let title of processorTitles; let i = index" [value]="i">
+        {{title}}
+      </option>
+
     </select>
 
   </div>

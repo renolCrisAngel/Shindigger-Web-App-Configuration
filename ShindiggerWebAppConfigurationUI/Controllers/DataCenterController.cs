@@ -37,8 +37,24 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
 
         // POST api/<DataCenterController>
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
+        public void Post([FromBody] DataCenter data)
+        {    
+            //try
+            //{
+            //    if(data.Datacenter == "http://")
+            //    {
+            //        return 0;
+            //    }
+            //    else
+            //    {
+            //        return 1;
+            //    }
+              
+            //}
+            //catch (Exception ex)
+            //{
+            //    return 0;
+            //}
         }
 
         // PUT api/<DataCenterController>/5
@@ -52,5 +68,12 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
         public void Delete(int id)
         {
         }
+
+
+        //[HttpGet, Route("getlocales")]
+        //public IEnumerable<string> GetLocales()
+        //{
+        //    return new string[] { "US", "PH" };
+        //}
     }
 }

@@ -36,7 +36,7 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
 
         // POST api/<PaymentProcessorController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] PaymentProcessor data)
         {
         }
 

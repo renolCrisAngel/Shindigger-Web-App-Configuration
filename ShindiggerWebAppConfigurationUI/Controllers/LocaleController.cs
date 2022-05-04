@@ -38,8 +38,9 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
 
         // POST api/<LocaleController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public string Post([FromBody] Locale data)
         {
+            return "successvalue";
         }
 
         // PUT api/<LocaleController>/5
@@ -53,5 +54,12 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpGet, Route("getlocales")]
+        public IEnumerable<string> GetLocales()
+        {
+            return new string[] { "Sample Locale 1", "Sample Locale 2" };
+        }
+
     }
 }

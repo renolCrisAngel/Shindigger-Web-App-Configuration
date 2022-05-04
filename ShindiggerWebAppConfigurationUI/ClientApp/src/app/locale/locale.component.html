@@ -10,8 +10,12 @@
   <div class="locale">
 
     <label for="Locale"> Locale </label>
-    <select id="ip">
-      <option></option>
+    <select id="ip" [(ngModel)]="selectValIndex">
+
+      <option *ngFor="let title of localeTitles; let i = index" [value]="i">
+        {{title}}
+      </option>
+
     </select>
 
   </div>
@@ -28,8 +32,5 @@
 
   </div>
 
-  <div class="test">
-    <button type="button" class="test-button" (click)="test()">Test</button>
-  </div>
 
 </div>

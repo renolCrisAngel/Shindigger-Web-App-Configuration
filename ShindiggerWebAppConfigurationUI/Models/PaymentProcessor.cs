@@ -8,5 +8,6 @@ namespace ShindiggerWebAppConfigurationUI
     public class PaymentProcessor
     {
         public int LocationCode { get; set; }
+        public string Paymentprocessor { get; set; }
     }
 }

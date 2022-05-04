@@ -8,5 +8,6 @@ namespace ShindiggerWebAppConfigurationUI
     public class DataCenter
     {
         public int CorpId { get; set; }
+        public string Datacenter { get; set; }
     }
 }

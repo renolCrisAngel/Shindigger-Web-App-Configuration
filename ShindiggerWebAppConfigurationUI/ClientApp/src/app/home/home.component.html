@@ -9,19 +9,12 @@
 
   <div class="data-center">
     <label for="DataCenter"> Select Datacenter </label>
-    <select id="ip">
-      <!--<option *ngFor="let title of httpTitles" >
-        {{httpTitles}}
-      </option>-->
+    <select id="ip" [(ngModel)]="selectValIndex">
+    
+      <option *ngFor="let title of httpTitles; let i = index" [value]="i">
+        {{title}}
+      </option>
 
-      <option>http://10.1.50.175/</option>
-      <option>http://localhost/</option>
-      <option>http://localhost:32843/</option>
-      <option>https://localhost:44382/</option>
-      <option>http://192.168.0.16/</option>
-      <option>http://192.168.0.250/</option>
-      <option>http://192.168.0.10</option>
-      <option>https://phqatesting.intercardinc.com/</option>
     </select>
 
   </div>

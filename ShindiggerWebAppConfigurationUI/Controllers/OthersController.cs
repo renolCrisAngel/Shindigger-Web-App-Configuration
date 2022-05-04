@@ -36,8 +36,9 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
 
         // POST api/<OthersController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Others data)
         {
+            
         }
 
         // PUT api/<OthersController>/5
@@ -51,5 +52,21 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpPost, Route("cardfee")]
+        public int SetCardFee([FromBody] CardFee data)
+        {
+            return 1;
+        }
+
+
+
+        [HttpPost, Route("taxmethod")]
+        public int SetTaxMethod([FromBody] TaxMethod data)
+        {
+            return 1;
+        }
+
+
     }
 }

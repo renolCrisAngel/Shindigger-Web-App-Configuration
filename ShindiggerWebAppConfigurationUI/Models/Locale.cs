@@ -10,5 +10,7 @@ namespace ShindiggerWebAppConfigurationUI
         public int CorpId { get; set; }
 
         public int LocaleId { get; set; }
+
+        public string locale { get; set; }
     }
 }
