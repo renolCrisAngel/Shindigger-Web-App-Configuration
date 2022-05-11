@@ -11,7 +11,7 @@ export class LocaleComponent implements OnInit {
   corpID: string = '6000';
   selectValIndex = 0;
 
-  localeTitles = ['sample1', 'sample2']
+  localeTitles = []
 
   constructor(private http: HttpClient,) { }
 
@@ -19,8 +19,6 @@ export class LocaleComponent implements OnInit {
   }
 
   loadlocales() {
-    console.log('this is load locales')
-
     const currentTitle = this.localeTitles[this.selectValIndex]
     console.log(currentTitle);
 
@@ -32,26 +30,28 @@ export class LocaleComponent implements OnInit {
 
     this.http.get<any>('https://localhost:44356/api/locale/getlocales').subscribe(result => {
       console.log(result);
-      this.localeTitles = result
+      this.localeTitles = result.map( item => item.lcidDecimal.toString() + "-" + item.name.toString() );
     }, error => console.error(error));
 
     const str = JSON.stringify(payload);
   }
 
   updatelocales() {
-    console.log('this is update locales')
-
     const currentTitle = this.localeTitles[this.selectValIndex]
-    console.log(currentTitle);
+    console.log('current title', currentTitle); 
+
+ 
+    const currentLCID = currentTitle.split("-")[0];
+    const name = currentTitle.split("-")[1];
 
     const payload = {
       CorpId: parseInt(this.corpID),
-      LocaleId: (this.selectValIndex),
-      locale: currentTitle
+      LCIDDecimal: currentLCID,
+      name: name
     };
 
 
-    const str = JSON.stringify(payload);
+    const str = JSON.stringify(payload);    
 
     console.log(str);
 
@@ -65,3 +65,4 @@ export class LocaleComponent implements OnInit {
   
 
 }
+  

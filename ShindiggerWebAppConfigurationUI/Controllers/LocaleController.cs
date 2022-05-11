@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ShindiggerWebAppConfigurationUI.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -38,9 +39,10 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
 
         // POST api/<LocaleController>
         [HttpPost]
-        public string Post([FromBody] Locale data)
+        public int Post([FromBody] Locale data)
         {
-            return "successvalue";
+            var res = Database.UpdateLocale(data.CorpID, data.LCIDDecimal);
+            return res;
         }
 
         // PUT api/<LocaleController>/5
@@ -56,9 +58,10 @@ namespace ShindiggerWebAppConfigurationUI.Controllers
         }
 
         [HttpGet, Route("getlocales")]
-        public IEnumerable<string> GetLocales()
+        public List<Locale> GetLocales()
         {
-            return new string[] { "Sample Locale 1", "Sample Locale 2" };
+            var locales = Database.GetLocales();
+            return locales;
         }
 
     }

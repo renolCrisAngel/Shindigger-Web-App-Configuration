@@ -20,15 +20,13 @@ export class OthersComponent implements OnInit {
     console.log ('this is update')
   }
 
-  enable() {
-    console.log('this is enable card fee')
-
-    const currentLocationid = this.locationID[this.selectValIndex]
+  enable(odd) {
+    const currentLocationid = this.locationID;
     console.log(currentLocationid);
 
     const payload = {
       LocationId: parseInt(this.locationID),
-      Enable: true
+      EnableCard: odd
     };
 
 
@@ -42,38 +40,16 @@ export class OthersComponent implements OnInit {
     }, error => console.error(error));
 
   }
+ 
+  taxOn(oddeven) {
+    
 
-  disable() {
-    console.log('this is disable card fee')
-
-    const currentLocationid = this.locationID[this.selectValIndex]
+    const currentLocationid = this.locationID;
     console.log(currentLocationid);
 
     const payload = {
       LocationId: parseInt(this.locationID),
-      Enable: false
-    };
-
-
-    const str = JSON.stringify(payload);
-
-    console.log(str);
-
-
-    this.http.post<any>('https://localhost:44356/api/others/cardfee', payload).subscribe(result => {
-      console.log(result);
-    }, error => console.error(error));
-  }
-
-  taxOn() {
-    console.log('this is tax On price')
-
-    const currentLocationid = this.locationID[this.selectValIndex]
-    console.log(currentLocationid);
-
-    const payload = {
-      LocationId: parseInt(this.locationID),
-      Taxon: 1
+      Taxon: oddeven
     };
 
 
@@ -85,29 +61,6 @@ export class OthersComponent implements OnInit {
     this.http.post<any>('https://localhost:44356/api/others/taxmethod', payload).subscribe(result => {
       console.log(result);
     }, error => console.error(error));
-  }
-
-  taxIn() {
-    console.log('this is tax In price')
-
-    const currentLocationid = this.locationID[this.selectValIndex]
-    console.log(currentLocationid);
-
-    const payload = {
-      LocationId: parseInt(this.locationID),
-      Taxin: 2
-    };
-
-
-    const str = JSON.stringify(payload);
-
-    console.log(str);
-
-
-    this.http.post<any>('https://localhost:44356/api/others/taxmethod', payload).subscribe(result => {
-      console.log(result);
-    }, error => console.error(error));
-
   }
 
 }

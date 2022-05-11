@@ -25,14 +25,14 @@ namespace ShindiggerWebAppConfigurationUI
     {
         public int LocationId { get; set; }
 
-        public bool Enable { get; set; }
+        public int EnableCard { get; set; }
     }
 
     public class TaxMethod
     {
         public int LocationId { get; set; }
 
-        public int Taxon { get; set; }
+        public int TaxOn { get; set; }
     }
 }
 
